@@ -70,12 +70,29 @@ services:
     networks:
       - matrix
 
+  pantalaimon:
+    image: matrixdotorg/pantalaimon
+    container_name: pantalaimon
+    restart: unless-stopped
+    volumes:
+      - ./pantalaimon:/data:Z
+    depends_on:
+      - synapse
+    networks:
+      - matrix
+
   mjolnir:
     image: matrixdotorg/mjolnir:latest
-    restart: unless-stopped
     container_name: mjolnir
+    restart: unless-stopped
     volumes:
       - ./mjolnir:/data:Z
+    depends_on:
+      - pantalaimon
+    networks:
+      - matrix
+
+
 
 networks:
   matrix:
