@@ -70,5 +70,12 @@ services:
     networks:
       - matrix
 
+  mjolnir:
+    image: matrixdotorg/mjolnir:latest
+    restart: unless-stopped
+    container_name: mjolnir
+    volumes:
+      - ./mjolnir:/data:Z
+
 networks:
   matrix:
