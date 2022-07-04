@@ -14,4 +14,7 @@ Matrix Synapse Docker-Compose
    - Enable `encryption_enabled_by_default_for_room_type` by default
    - Edit whatever else you might want to
 4. Copy config.sample.json from https://github.com/vector-im/element-web to `./element/config.json` and make the approriate adjustments
-5. Run `docker-compose up` and make sure nothing errors out. You can use `docker-compose up -d` to start it in the background if you want.
+5. Copy the config from https://github.com/matrix-org/pantalaimon to `./pantalaimon/pantalaimon.conf` and edit it accordingly
+6. Run `docker-compose up` and make sure nothing errors out. You can use `docker-compose up -d` to start it in the background if you want.
+7. Create a user for mjolnir
+8. Copy the config from https://github.com/matrix-org/mjolnir/blob/main/config/default.yaml to `./mjolnir/config/production.yaml and edit it accordingly.

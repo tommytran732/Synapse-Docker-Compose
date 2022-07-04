@@ -7,6 +7,7 @@ services:
 
   synapse:
     image: docker.io/matrixdotorg/synapse:latest
+    # Altneratively, use https://github.com/Wonderfall/docker-synapse for a hardened image. You gotta build it though.
     # Since synapse does not retry to connect to the database, restart upon
     # failure
     restart: unless-stopped
