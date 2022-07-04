@@ -71,7 +71,7 @@ services:
       - matrix
 
   pantalaimon:
-    image: matrixdotorg/pantalaimon
+    image: matrixdotorg/pantalaimon:latest
     container_name: pantalaimon
     restart: unless-stopped
     volumes:
